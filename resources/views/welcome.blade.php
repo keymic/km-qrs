@@ -10,12 +10,19 @@
                 </div>
                 @foreach ($Quotes as $quote)
                 <div class="panel panel-default">
-                    <div class="panel-heading"><a href="{{ $quote->id }}">#{{ $quote->id }}</a></div>
+                    <div class="panel-heading">
+                        <a href="{{ $quote->id }}">#{{ $quote->id }}</a>
+                        <a href="{{ $quote->id }}"><i class="fa fa-plus fa-fw"></i></a>
+                        0
+                        <a href="{{ $quote->id }}"><i class="fa fa-minus fa-fw"></i></a>
+                    </div>
                     <div class="panel-body">{{ $quote->content }}</div>
                     <div class="panel-footer">{{ $quote->created_at }}</div>
                 </div>
                 @endforeach
-                {{ $Quotes->links() }}
+                @if (!isset($noPaginate))
+                    {{ $Quotes->links() }}
+                @endif
             </div>
         </div>
     </div>

@@ -24,7 +24,7 @@ class AppController extends Controller
             return redirect('/notFound');
         }
 
-        return view('quote')->with('Quote', $Quote);
+        return view('welcome')->with('Quotes', [$Quote])->with('pageTitle', trans('app.quote'))->with('noPaginate', true);
     }
 
     public function add(Request $request)
