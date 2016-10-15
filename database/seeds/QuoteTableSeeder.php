@@ -12,7 +12,7 @@ class QuoteTableSeeder extends Seeder
     public function run()
     {
         DB::table('quote')->insert([
-            'content' => str_random(100),
+            'content' => str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10),
             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon\Carbon::now()->toDateTimeString()
         ]);
