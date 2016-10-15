@@ -8,5 +8,7 @@ return [
     'content' => 'Content',
     'most_popular' => 'Most popular',
     'about' => 'About',
+    'twice_vote' => 'You cannot vote twice',
+    'voted' => 'Voted successfully'
 
 ];

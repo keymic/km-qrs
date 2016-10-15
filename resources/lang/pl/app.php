@@ -8,5 +8,7 @@ return [
     'content' => 'Treść',
     'most_popular' => 'Najbardziej popularne',
     'about' => 'Co to?',
+    'twice_vote' => 'Nie można głosować dwukrotnie',
+    'voted' => 'Zagłosowano'
 
 ];

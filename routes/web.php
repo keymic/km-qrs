@@ -17,4 +17,7 @@ Route::get('/add', 'AppController@add');
 Route::post('/add', 'AppController@add');
 Route::get('/popular', 'AppController@popular');
 Route::get('/notFound', 'AppController@notFound');
+Route::get('/omg/{id}', ['as' => 'id', 'uses' => 'AppController@rate']);
+Route::get('/wtf/{id}', ['as' => 'id', 'uses' => 'AppController@rate']);
+
 Route::get('/{id}', ['as' => 'id', 'uses' => 'AppController@quote']);
