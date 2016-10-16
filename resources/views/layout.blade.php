@@ -42,8 +42,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/about') }}"><i class="fa fa-info-circle fa-fw"></i>{{ trans('app.about') }}</a></li>
                 <li><a href="{{ url('/add') }}"><i class="fa fa-plus fa-fw"></i>{{ trans('app.add') }}</a></li>
-                <li><a href="{{ url('/') }}"><i class="fa fa-hourglass fa-fw"></i>{{ trans('app.newest_quotes') }}</a></li>
+                <li><a href="{{ url('/') }}"><i class="fa fa-hourglass-o fa-fw"></i>{{ trans('app.newest_quotes') }}</a></li>
                 <li><a href="{{ url('/popular') }}"><i class="fa fa-star fa-fw"></i>{{ trans('app.most_popular') }}</a></li>
+                <li><a href="{{ url('/rss') }}"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
             </ul>
 
         </div>
@@ -51,6 +52,12 @@
 </nav>
 
 @yield('content')
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Created using <a href="https://github.com/keymic/km-qrs">KM-QRS</a></span>
+    </div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

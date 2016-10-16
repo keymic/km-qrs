@@ -11,10 +11,13 @@ class QuoteTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('quote')->insert([
-            'content' => str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10),
-            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->toDateTimeString()
-        ]);
+        for($i = 0; $i < 20; $i++) {
+            DB::table('quote')->insert([
+                'content' => str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10) . ' ' . str_random(10),
+                'count' => 0,
+                'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => Carbon\Carbon::now()->toDateTimeString()
+            ]);
+        }
     }
 }

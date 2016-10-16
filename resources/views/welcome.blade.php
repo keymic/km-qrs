@@ -13,7 +13,7 @@
                     <div class="panel-heading">
                         <a href="{{ $quote->id }}">#{{ $quote->id }}</a>
                         <i class="fa fa-plus fa-fw omg"></i>
-                        <span class="rate-count">{{ $quote->rates_plus_count - $quote->rates_minus_count }}</span>
+                        <span class="rate-count">{{ $quote->count }}</span>
                         <i class="fa fa-minus fa-fw wtf"></i>
                     </div>
                     <div class="panel-body">{{ $quote->content }}</div>
